@@ -246,7 +246,7 @@ GOT THE FLAG
 # method 2 (metasploit)
 reflex gallery file upload
 
-
+worldpress databases cred are avalab;e at var/www/html/wp-config.php
 
 # Privilage escalatekali
 
